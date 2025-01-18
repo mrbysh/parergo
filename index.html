@@ -84,10 +84,10 @@
         controls.autoRotateSpeed = 1;
         
         // 光源の作成
-        const hemisphereLight = new THREE.HemisphereLight(0xaaaaaa, 0xffffff, 0.9); // ソフトな白色光
+        const hemisphereLight = new THREE.HemisphereLight(0xaaaaaa, 0xffffff, 1.8); // ソフトな白色光
         scene.add(hemisphereLight);
         
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
         directionalLight.position.set(5, 2, 7.5);
         directionalLight.castShadow = true;
         directionalLight.shadow.mapSize.width = 8192;
@@ -126,7 +126,7 @@
                         geometry.scale(0.001, 0.001, 0.001);
         
                         const material = new THREE.MeshLambertMaterial({
-                            color: 0xcccccc,
+                            color: 0xffffff,
                         });
                         const stlMesh = new THREE.Mesh(geometry, material);
                         stlMesh.castShadow = true; // メッシュが影を落とす
